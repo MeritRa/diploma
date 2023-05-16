@@ -38,9 +38,10 @@ dependencies {
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
     testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
 
-    implementation 'com.epam.reportportal:logger-java-log4j:5.1.4'
-    implementation 'com.epam.reportportal:agent-java-junit:5.1.2'
+    implementation 'com.epam.reportportal:agent-java-junit5:5.1.6'
+    implementation 'com.epam.reportportal:logger-java-logback:5.1.4'
     implementation 'ch.qos.logback:logback-classic:1.4.6'
+    implementation 'com.epam.reportportal:logger-java-log4j:5.0.2'
 }
 
 test {

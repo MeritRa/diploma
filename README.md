@@ -18,6 +18,9 @@
 7. **Пройти по ссылке [localhost:8082](http://localhost:8082/ui/#login) и войти в систему по данным:**
 > login: superadmin
 > 
-> pass: erebus
+> pass: neto_pass
 
-8. **Запустить автотесты в IDEA.**
+8. Заменить данные в файле [reportportal.properties](src%2Ftest%2Fresources%2Freportportal.properties) данными со [страницы](http://localhost:8082/ui/#user-profile):
+
+
+9. **Запустить автотесты в IDEA.**
