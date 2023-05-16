@@ -1,6 +1,5 @@
 package ru.netology.data;
 
-import com.codeborne.selenide.conditions.Or;
 import com.github.javafaker.Faker;
 import io.netty.util.internal.ThreadLocalRandom;
 import lombok.Value;
@@ -9,7 +8,6 @@ import lombok.var;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
-import java.util.Random;
 
 public class DataHelper {
     static Faker faker = new Faker(new Locale("RU"));
@@ -30,12 +28,15 @@ public class DataHelper {
     public static class OrderStatus {
         String status;
     }
+
     public static OrderStatus getApproved() {
         return new OrderStatus("APPROVED");
     }
+
     public static OrderStatus getDeclined() {
         return new OrderStatus("DECLINED");
     }
+
     public static String generateMonth() {
         String[] months = new String[]{"01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"};
         var randomIndex = Math.floor(Math.random() * (months.length - 1));

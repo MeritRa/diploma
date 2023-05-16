@@ -64,4 +64,12 @@ public class CreditPage {
                 .shouldBe(visible, Duration.ofSeconds(15))
                 .shouldHave(exactText(value));
     }
+
+    public String getNotificationTest() {
+        return notification.getText();
+    }
+
+    public String getErrorTest() {
+        return error.getText();
+    }
 }

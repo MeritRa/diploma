@@ -11,7 +11,8 @@ import static com.codeborne.selenide.Condition.visible;
 import static com.codeborne.selenide.Selenide.*;
 
 public class PaymentPage {
-    private final SelenideElement paymentField = $$("h3").find(exactText("Оплата по карте"));;
+    private final SelenideElement paymentField = $$("h3").find(exactText("Оплата по карте"));
+    ;
     private final SelenideElement cardField = $("[placeholder='0000 0000 0000 0000']");
     private final SelenideElement monthField = $("[placeholder='08']");
     private final SelenideElement yearField = $("[placeholder='22']");
@@ -63,5 +64,13 @@ public class PaymentPage {
         error
                 .shouldBe(visible, Duration.ofSeconds(15))
                 .shouldHave(Condition.exactText(value));
+    }
+
+    public String getNotificationTest() {
+        return notification.getText();
+    }
+
+    public String getErrorTest() {
+        return error.getText();
     }
 }

@@ -10,7 +10,8 @@ public class HeaderPage {
     private final SelenideElement creditButton = $$("button").find(exactText("Купить в кредит"));
     private final SelenideElement payButton = $$("button").find(exactText("Купить"));
 
-    public HeaderPage() {}
+    public HeaderPage() {
+    }
 
     public PaymentPage choosePaymentPath() {
         payButton.click();
