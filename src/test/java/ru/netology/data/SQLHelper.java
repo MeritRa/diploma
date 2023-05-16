@@ -1,6 +1,7 @@
 package ru.netology.data;
 
 import lombok.SneakyThrows;
+import lombok.var;
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 

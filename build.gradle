@@ -1,6 +1,7 @@
 plugins {
     id 'java'
     id 'io.freefair.lombok' version '5.3.0'
+    id 'io.qameta.allure' version '2.11.2'
 }
 
 group 'ru.netology'
@@ -10,7 +11,21 @@ sourceCompatibility = 11
 compileJava.options.encoding = "UTF-8"
 compileTestJava.options.encoding = "UTF-8"
 
+apply plugin: 'java'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+description = 'ReportPortal JUnit 4 example'
+
+allure {
+    version = '2.20.1' // Latest Allure Version
+    useJUnit5 {
+        version = '2.20.1' // Latest Allure Version
+    }
+}
+
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -21,9 +36,17 @@ dependencies {
     testImplementation 'mysql:mysql-connector-java:8.0.18'
     testImplementation 'com.github.javafaker:javafaker:1.0.1'
     testImplementation 'commons-dbutils:commons-dbutils:1.7'
+    testImplementation 'io.qameta.allure:allure-selenide:2.20.1'
+
+    implementation 'com.epam.reportportal:logger-java-log4j:5.1.4'
+    implementation 'com.epam.reportportal:agent-java-junit:5.1.2'
+    implementation 'ch.qos.logback:logback-classic:1.4.6'
 }
 
 test {
     useJUnitPlatform()
     systemProperty 'selenide.headless', System.getProperty('selenide.headless')
+
+    systemProperty 'junit.jupiter.extensions.autodetection.enabled', true
+    testLogging.showStandardStreams = true
 }

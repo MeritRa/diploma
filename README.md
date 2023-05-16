@@ -12,4 +12,12 @@
 5. **В терминале каталога [gate-simulator](gate-simulator) ввести команду:**
 > npm start -port 9999 
 
-6. **Запустить автотесты в IDEA.**
+6. **В терминале каталога [ReportPortal](ReportPortal) ввести команду (на территории России необходимо включить VPN!):**
+> docker-compose -p reportportal up -d -force-recreate
+
+7. **Пройти по ссылке [localhost:8082](http://localhost:8082/ui/#login) и войти в систему по данным:**
+> login: superadmin
+> 
+> pass: erebus
+
+8. **Запустить автотесты в IDEA.**

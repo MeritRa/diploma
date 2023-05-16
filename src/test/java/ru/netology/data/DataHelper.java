@@ -4,6 +4,7 @@ import com.codeborne.selenide.conditions.Or;
 import com.github.javafaker.Faker;
 import io.netty.util.internal.ThreadLocalRandom;
 import lombok.Value;
+import lombok.var;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
