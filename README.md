@@ -21,6 +21,6 @@
 > pass: neto_pass
 
 8. Заменить данные в файле [reportportal.properties](src%2Ftest%2Fresources%2Freportportal.properties) данными со [страницы](http://localhost:8082/ui/#user-profile):
-
+![данные](https://github.com/MeritRa/diploma/assets/113490038/d0c128cb-e6d2-4ffb-b9fc-5b09ab74d088)
 
 9. **Запустить автотесты в IDEA.**
