@@ -36,6 +36,38 @@ public class CreditPage {
         button.click();
     }
 
+    public void emptyCardCredit(DataHelper.CardInfo info) {
+        monthField.setValue(info.getMonth());
+        yearField.setValue(info.getYear());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void emptyMonthCredit(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        yearField.setValue(info.getYear());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void emptyYearCredit(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        monthField.setValue(info.getMonth());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void emptyNameCredit(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        monthField.setValue(info.getMonth());
+        yearField.setValue(info.getYear());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
     public void emptyCvcCredit(DataHelper.CardInfo info) {
         cardField.setValue(info.getNumber());
         monthField.setValue(info.getMonth());
@@ -48,6 +80,15 @@ public class CreditPage {
         cardField.setValue(info.getNumber());
         monthField.setValue(info.getMonth());
         yearField.setValue(DataHelper.getEarlyYear());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void laterYearCredit(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        monthField.setValue(info.getMonth());
+        yearField.setValue(DataHelper.getLaterYear());
         nameField.setValue(info.getName());
         cvcField.setValue(info.getCVC());
         button.click();

@@ -15,10 +15,17 @@
 
 ### Общие рекомендации:
 В ходе тестирования был обнаружен недочёт системы: при отклонении банком кредита\покупки об этом не сообщается пользователю - система показывает сообщение "Операция одобрена Банком", хотя в базе данных остаётся статус "declined".
-### [Ссылка на баг-репорт](https://github.com/MeritRa/diploma/issues/1)
+### [Ссылка на баг-репорты](https://github.com/MeritRa/diploma/issues)
 
-## [Посмотреть отчёт Gradle](build/reports/tests/test/index.html)
+(Ссылки на репорты работают после первого запуска тестов на локальном ПК)
 
-## [Посмотреть отчёт Allure](build/reports/allure-report/allureReport/index.html)
+## [Посмотреть отчёт Gradle](http://localhost:63342/dplm/build/reports/tests/test/index.html)
+
+
+
+## [Посмотреть отчёт Allure](http://localhost:63342/dplm/build/reports/allure-report/allureReport/index.html)
+
+
 
 ## [Посмотреть отчёт Report Portal](http://localhost:8082/ui/#superadmin_personal/launches/all)
+

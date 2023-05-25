@@ -36,19 +36,59 @@ public class PaymentPage {
         button.click();
     }
 
+    public void emptyCardPayment(DataHelper.CardInfo info) {
+        monthField.setValue(info.getMonth());
+        yearField.setValue(info.getYear());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void emptyMonthPayment(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        yearField.setValue(info.getYear());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void emptyYearPayment(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        monthField.setValue(info.getMonth());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void emptyNamePayment(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        monthField.setValue(info.getMonth());
+        yearField.setValue(info.getYear());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
     public void emptyCvcPayment(DataHelper.CardInfo info) {
         cardField.setValue(info.getNumber());
         monthField.setValue(info.getMonth());
         yearField.setValue(info.getYear());
         nameField.setValue(info.getName());
         button.click();
-        ;
     }
 
     public void earlyYearPayment(DataHelper.CardInfo info) {
         cardField.setValue(info.getNumber());
         monthField.setValue(info.getMonth());
         yearField.setValue(DataHelper.getEarlyYear());
+        nameField.setValue(info.getName());
+        cvcField.setValue(info.getCVC());
+        button.click();
+    }
+
+    public void laterYearPayment(DataHelper.CardInfo info) {
+        cardField.setValue(info.getNumber());
+        monthField.setValue(info.getMonth());
+        yearField.setValue(DataHelper.getLaterYear());
         nameField.setValue(info.getName());
         cvcField.setValue(info.getCVC());
         button.click();
