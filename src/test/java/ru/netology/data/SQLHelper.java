@@ -16,7 +16,7 @@ public class SQLHelper {
     }
 
     public static Connection getConn() throws SQLException {
-        return DriverManager.getConnection("jdbc:mysql://localhost:3306/app", "app", "pass");
+        return DriverManager.getConnection(System.getProperty("sut.url"), System.getProperty("db.user"), System.getProperty("db.password"));
     }
 
     public static DataHelper.OrderStatus getApprovedCreditOrderStatus() {
@@ -66,7 +66,7 @@ public class SQLHelper {
     public static String getPaymentAmount() {
         var selectSQL = "SELECT amount FROM payment_entity WHERE status='APPROVED' ORDER BY created DESC LIMIT 1";
         try (var conn = getConn()) {
-            return runner.query(conn, selectSQL, new ScalarHandler<String>());
+            return runner.query(conn, selectSQL, new ScalarHandler<>());
         } catch (SQLException exception) {
             exception.printStackTrace();
         }
